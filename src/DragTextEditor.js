@@ -20,7 +20,7 @@ const LEFT_HOLDER = 'LEFT_HOLDER';
 const CENTER = 'CENTER';
 const HOLDER_SIZE = 14;
 const TOPLEFT_SIZE = 25;
-const TEXT ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+const TEXT =""
 const CLOSE_ICON = require('../icons/closed.png');
 const COMPASS_ICON = require('../icons/compassed.png');
 
@@ -50,7 +50,7 @@ export default class DragTextEditor extends Component {
       w: w < minWidth ? minWidth : w,
       h: h < minHeight ? minHeight :h,
       ended:true,
-      giveInput:false,
+      giveInput:true,
       text: this.props.PlaceHolder==null?TEXT:this.props.PlaceHolder,
       isBorder:false,
     };
@@ -184,7 +184,7 @@ childTL=()=>{
  return(
   <TouchableOpacity onPress={()=>this.props.TopLeftAction==undefined?this.isBorder():this.props.TopLeftAction()} style={styles.Top}>
      {  this.props.TopLeftIcon === null? 
-           <Image style={styles.ico} source={COMPASS_ICON}/>
+           <Image style={styles.ico}/>
              :this.props.TopLeftIcon
         }
   </TouchableOpacity>
@@ -194,7 +194,7 @@ childTR=()=>{
  return(
   <TouchableOpacity onPress={()=>this.props.TopRightAction===undefined?null:this.props.TopRightAction()} style={styles.Top}>
      { this.props.TopRightIcon === null? 
-        <Image style={styles.ico} source={CLOSE_ICON}/>
+        <Image style={styles.ico}/>
           :this.props.TopRightIcon
          } 
   </TouchableOpacity>
@@ -445,11 +445,11 @@ childMR=()=>{
              borderWidth:1, 
               width:"100%",
                height:"100%",
-                borderColor:isBorder?"transparent":"black"
+                borderColor:isBorder?"transparent":"transparent"
          }}>
          
         
-   <View style={{borderColor:isBorder?"transparent":"white",borderWidth:1}} onLayout={this.calcLayout}>
+   <View style={{borderColor:isBorder?"transparent":"transparent",borderWidth:1}} onLayout={this.calcLayout}>
          {this.state.giveInput?
           <TextInput
             style={{
@@ -470,7 +470,11 @@ childMR=()=>{
             }}
           selectTextOnFocus={true}
           multiline={true}
+          selectionColor={"white"}
+          blurOnSubmit={true}
           autoFocus={true}
+          selectTextOnFocus={true}
+          onChangeText={this.isDraggable=true}
           onChangeText={(text) => this.onText(text)}
           value={this.state.text}
           />
@@ -508,17 +512,12 @@ const styles = StyleSheet.create({
 holder:{
   width:18,
    height:18,
-    backgroundColor:"#fff",
-     borderRadius:9,
-      borderWidth:1,
        justifyContent: "center",
         alignItems: "center" 
 },
 Top:{
  width: 30, 
   height:30,
-   borderWidth: 1,
-    borderColor: 'white',
      justifyContent: "center",
       alignSelf: "center",
        alignItems: "center",
@@ -526,12 +525,6 @@ Top:{
          backgroundColor: 'transparent' 
 },
 ico:{
-  width:30,
-   height:30,
-    borderRadius:15,
-     borderWidth:1,
-      backgroundColor:"white",
-       borderColor:"white",
 },
 center:{
   width:'100%',
@@ -543,9 +536,9 @@ center:{
 DragTextEditor.defaultProps = {
   x: 0,
   y: 0,
-  w: 200,
+  w: 300,
   h: 200,
-  minWidth: 200,
+  minWidth: 300,
   minHeight: 200,
   windowBorder: {
     x: 0,

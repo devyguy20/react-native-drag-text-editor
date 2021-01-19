@@ -1,16 +1,39 @@
 {
-  "name": "react-native-drag-text-editor",
-  "version": "0.0.4",
-  "description": "React Native Text Prototype for photo editing / manipulation cases.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "github:devyguy20/react-native-drag-text-editor",
+  "_id": "react-native-drag-text-editor@0.0.4",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-drag-text-editor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "devyguy20/react-native-drag-text-editor",
+    "rawSpec": "devyguy20/react-native-drag-text-editor",
+    "saveSpec": "github:devyguy20/react-native-drag-text-editor",
+    "fetchSpec": null,
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "github:devyguy20/react-native-drag-text-editor#7c271348b16c05e5edc60bfb14e695e8ab075d95",
+  "_spec": "devyguy20/react-native-drag-text-editor",
+  "_where": "/Users/netanelmichael/Desktop/sneakpic",
+  "author": {
+    "name": "Enes Karpuz"
+  },
+  "bugs": {
+    "url": "https://github.com/eneskarpuz/react-native-drag-text-editor.git/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2"
   },
+  "deprecated": false,
+  "description": "React Native Text Prototype for photo editing / manipulation cases.",
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/runtime": "^7.11.2",
@@ -21,10 +44,7 @@
     "metro-react-native-babel-preset": "^0.63.0",
     "react-test-renderer": "16.13.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eneskarpuz/react-native-drag-text-editor.git"
-  },
+  "homepage": "https://github.com/eneskarpuz/react-native-drag-text-editor.git#readme",
   "keywords": [
     "\"react",
     "native\"",
@@ -42,11 +62,15 @@
     "photo",
     "manipulating\""
   ],
-  "author": "Enes Karpuz",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/eneskarpuz/react-native-drag-text-editor.git/issues"
+  "main": "index.js",
+  "name": "react-native-drag-text-editor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eneskarpuz/react-native-drag-text-editor.git"
   },
-  "homepage": "https://github.com/eneskarpuz/react-native-drag-text-editor.git#readme"
-
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.4"
 }
